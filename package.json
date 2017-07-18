@@ -5,7 +5,7 @@
   "main": "wild-blog-app.js",
   "scripts": {
     "postinstall": "webpack -p --progress",
-    "start": "NODE_ENV=production node wild-blog-app",
+    "start": "NODE_ENV=development node wild-blog-app",
     "watch:build": "webpack --watch",
     "watch:server": "nodemon wild-blog-app --watch \"./app\"",
     "dev": "npm run watch:build | npm run watch:server"

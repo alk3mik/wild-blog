@@ -31,4 +31,22 @@ export default ['$stateProvider', '$urlRouterProvider', '$locationProvider', ($s
                 }
             }]
         })
+        .state('algo1', {
+            url: '/algo1',
+            template: ''"My Friends : {{friends}}"'',
+            controller: ['$scope', function($scope) {
+                let friends = ["Ryan", "Kieran", "Jason", "Yous"];
+                function friend(friends){
+                  let myfriends = [];
+                  friends.forEach((friend) => {
+                    if(friend.length === 4) {
+                      myfriends.push(friend);
+                    }
+                  })
+                  return myfriends;
+                }
+                console.log(friend(["Ryan", "Kieran", "Mark"]))
+                $scope.friends = friend(["Ryan", "Kieran", "Mark"]);
+            }]
+           }) 
 }]
